@@ -1,0 +1,19 @@
+
+server:
+  port: 8888
+#  servlet:
+#    context-path: /cloud-config-server
+
+spring:
+#  profiles:
+#      active: native
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+       git:
+        uri: https://github.com/ozaytunctan/spring-cloud-config-server.git
+        clone-on-start: true
+        search-paths: config
+          
